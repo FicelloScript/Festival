@@ -1,30 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Accueil – Festival</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo">Festival</a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="activites.html">Activités</a></li>
-                <li><a href="a-propos.html">À propos</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="container navigation">
+            <a href="index.html" class="logo">Festival</a>
+            <nav aria-label="Navigation principale">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Accueil</a></li>
+                    <li><a href="activites.html">Activités</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
+    <main class="container">
+        <section class="intro">
+            <p class="eyebrow">Édition 2026</p>
+            <h1>Trois jours de musique et de rencontres</h1>
+            <p>Concerts, ateliers et animations pour tous les âges : le festival revient cet été pour trois jours de fête au cœur du parc du Moulin.</p>
+        </section>
+
+        <section class="featured">
+            <div class="featured-content">
+                <p class="eyebrow">Du 10 au 12 juillet 2026</p>
+                <h2>Parc du Moulin, entrée libre</h2>
+                <p>Plus de 30 artistes sur deux scènes, un village associatif et des espaces dédiés aux familles.</p>
+                <div class="hero-actions">
+                    <a href="activites.html" class="button">Voir la programmation</a>
+                    <a href="contact.html" class="button button-secondary">Infos pratiques</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="news-heading">
+                <h2>À découvrir</h2>
+            </div>
+            <div class="news-grid">
+                <article class="news-card">
+                    <h3>La programmation</h3>
+                    <p>Concerts, ateliers créatifs et animations : tout le programme des trois jours.</p>
+                    <a href="activites.html" class="card-link">Voir les activités →</a>
+                </article>
+                <article class="news-card">
+                    <h3>Notre histoire</h3>
+                    <p>Comment le festival est né et les valeurs que l'association défend depuis le début.</p>
+                    <a href="a-propos.html" class="card-link">En savoir plus →</a>
+                </article>
+                <article class="news-card">
+                    <h3>Venir au festival</h3>
+                    <p>Accès, horaires et contact de l'équipe pour toutes vos questions.</p>
+                    <a href="contact.html" class="card-link">Nous contacter →</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2026 Festival – Tous droits réservés</p>
-        <nav>
-            <ul>
-                <li><a href="a-propos.html">À propos</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container footer-content">
+            <p>&copy; 2026 Festival – Tous droits réservés</p>
+            <nav aria-label="Liens du pied de page">
+                <ul>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
 </body>
 </html>
