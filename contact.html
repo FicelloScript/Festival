@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-hero {
+            margin: 8px 0 40px;
+            padding: 48px 36px;
+            border-radius: 12px;
+            color: white;
+            background:
+                radial-gradient(ellipse at 80% 20%, #ffbd59 0, transparent 32%),
+                radial-gradient(ellipse at 70% 80%, #d83b54 0, transparent 45%),
+                linear-gradient(120deg, #45245d, #172f55);
+        }
+        .contact-hero .eyebrow {
+            color: #ffd27a;
+        }
+        .contact-hero h1 {
+            margin-bottom: 12px;
+        }
+        .contact-hero p {
+            max-width: 520px;
+            margin-bottom: 0;
+            color: #f1eaf4;
+            font-size: 1.05rem;
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 24px;
+            padding-bottom: 64px;
+            align-items: start;
+        }
+
+        .contact-info {
+            display: grid;
+            gap: 16px;
+        }
+        .contact-card {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 20px 24px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: #fff;
+        }
+        .contact-icon {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #fdeae6;
+            font-size: 1.2rem;
+        }
+        .contact-card h2 {
+            margin: 0 0 4px;
+            font-size: 1rem;
+        }
+        .contact-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+
+        .contact-form {
+            padding: 32px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 8px 24px rgba(32, 33, 38, 0.06);
+        }
+        .contact-form h2 {
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+            letter-spacing: -0.04em;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            margin-bottom: 18px;
+            padding: 12px 14px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(233, 79, 55, 0.15);
+        }
+        .contact-form textarea {
+            resize: vertical;
+        }
+        .contact-form button {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            background: var(--accent);
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .contact-form button:hover {
+            background: #cf3f28;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 700px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+            .contact-hero {
+                padding: 32px 24px;
+            }
+            .contact-form {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container navigation">
+            <a class="logo" href="index.html">Festival en <span>Scène</span></a>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="activites.html">Activités</a>
+                <a href="contact.html" aria-current="page">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="contact-hero">
+            <p class="eyebrow">Contact</p>
+            <h1>Parlons-en</h1>
+            <p>Une question sur le festival, les billets ou les artistes ? Écrivez-nous, on vous répond vite.</p>
+        </section>
+
+        <div class="contact-layout">
+            <aside class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h2>Adresse</h2>
+                        <p>12 rue de la Musique<br>75000 Paris</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <h2>Email</h2>
+                        <p>contact@festival-en-scene.fr</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <h2>Téléphone</h2>
+                        <p>01 23 45 67 89</p>
+                    </div>
+                </div>
+            </aside>
+
+            <form class="contact-form" action="#" method="post">
+                <h2>Envoyez-nous un message</h2>
+
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="vous@exemple.fr" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Votre message..." required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </main>
+
+    <footer id="infos">
+        <div class="container">Festival en Scène</div>
+    </footer>
+</body>
+</html>
