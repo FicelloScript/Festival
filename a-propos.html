@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos – Festival</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== Page À propos ===== */
+
+        /* Titre de page */
+        .apropos-entete {
+            padding: 56px 0 24px;
+        }
+
+        .apropos-intro {
+            max-width: 60ch;
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+
+        /* Carte dégradée (même style que les autres pages) */
+        .apropos-carte {
+            border-radius: 12px;
+            background:
+                radial-gradient(ellipse at 80% 20%, #ffbd59 0, transparent 32%),
+                radial-gradient(ellipse at 70% 80%, #d83b54 0, transparent 45%),
+                linear-gradient(120deg, #45245d, #172f55);
+            color: #fff;
+        }
+
+        .apropos-une {
+            margin: 8px 0 48px;
+            padding: 40px 36px;
+        }
+
+        .apropos-une .eyebrow {
+            color: #ffd27a;
+        }
+
+        .apropos-une h2 {
+            max-width: 22ch;
+            margin-bottom: 12px;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            letter-spacing: -0.05em;
+            line-height: 1.1;
+        }
+
+        .apropos-une p:last-child {
+            max-width: 52ch;
+            margin-bottom: 0;
+            color: #f1eaf4;
+        }
+
+        /* Titres de section */
+        .apropos-titre {
+            margin-bottom: 16px;
+            font-size: 1.6rem;
+            letter-spacing: -0.04em;
+        }
+
+        /* Histoire */
+        .apropos-histoire {
+            margin-bottom: 48px;
+        }
+
+        .apropos-histoire p {
+            max-width: 65ch;
+            margin-bottom: 16px;
+            color: var(--muted);
+        }
+
+        /* En bref */
+        .apropos-infos {
+            margin-bottom: 48px;
+        }
+
+        .apropos-infos dl {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 0;
+        }
+
+        .apropos-infos dl div {
+            padding: 18px 20px;
+            border: 1px solid var(--line);
+            border-top: 4px solid var(--accent);
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        .apropos-infos dt {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .apropos-infos dd {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        /* Valeurs */
+        .apropos-valeurs {
+            margin-bottom: 48px;
+        }
+
+        .apropos-grille {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+
+        .apropos-grille article {
+            padding-left: 16px;
+            border-left: 4px solid #ffbd59;
+        }
+
+        .apropos-grille h3 {
+            margin: 0 0 4px;
+            font-size: 1.15rem;
+        }
+
+        .apropos-grille p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        /* Appel à l'action */
+        .apropos-cta {
+            margin-bottom: 64px;
+            padding: 48px 24px;
+            text-align: center;
+        }
+
+        .apropos-cta h2 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            letter-spacing: -0.04em;
+        }
+
+        /* Accessibilité */
+        main a:focus-visible {
+            outline: 3px solid #ffbd59;
+            outline-offset: 3px;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+            .apropos-entete {
+                padding-top: 40px;
+            }
+
+            .apropos-une {
+                padding: 28px 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container navigation">
+            <a href="index.html" class="logo">Festival</a>
+            <nav aria-label="Navigation principale">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="activites.html">Activités</a></li>
+                    <li><a href="a-propos.html" aria-current="page">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="apropos-entete">
+            <p class="eyebrow">Le festival</p>
+            <h1>À propos</h1>
+            <p class="apropos-intro">Qui nous sommes, d'où vient le festival et ce qui nous fait avancer.</p>
+        </div>
+
+        <section class="apropos-carte apropos-une">
+            <p class="eyebrow">Depuis 2015</p>
+            <h2>Trois jours de musique, une seule communauté.</h2>
+            <p>Artistes, bénévoles et public se retrouvent chaque été autour de la scène.</p>
+        </section>
+
+        <section class="apropos-histoire">
+            <h2 class="apropos-titre">Notre histoire</h2>
+            <p>Né dans un petit village, le festival a commencé avec une scène, deux groupes locaux et une centaine de curieux. Aujourd'hui, il accueille des milliers de personnes chaque été.</p>
+            <p>Notre idée n'a pas changé : faire découvrir des artistes émergents et créer un moment de partage ouvert à tous.</p>
+        </section>
+
+        <section class="apropos-infos" aria-labelledby="infos-titre">
+            <h2 class="apropos-titre" id="infos-titre">En bref</h2>
+            <dl>
+                <div>
+                    <dt>Dates</dt>
+                    <dd>10 au 12 juillet 2026</dd>
+                </div>
+                <div>
+                    <dt>Lieu</dt>
+                    <dd>Parc du Moulin</dd>
+                </div>
+                <div>
+                    <dt>Artistes</dt>
+                    <dd>30+ artistes sur 2 scènes</dd>
+                </div>
+                <div>
+                    <dt>Public</dt>
+                    <dd>15 000 festivaliers</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section class="apropos-valeurs">
+            <h2 class="apropos-titre">Ce qui nous guide</h2>
+            <div class="apropos-grille">
+                <article>
+                    <h3>Découverte</h3>
+                    <p>La moitié de la programmation est consacrée à des artistes émergents.</p>
+                </article>
+                <article>
+                    <h3>Accessibilité</h3>
+                    <p>Tarifs réduits, site accessible aux personnes à mobilité réduite et espace calme.</p>
+                </article>
+                <article>
+                    <h3>Écologie</h3>
+                    <p>Gobelets réutilisables, tri des déchets et navettes pour limiter la voiture.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="apropos-carte apropos-cta">
+            <h2>Rejoignez-nous cet été</h2>
+            <a class="button" href="activites.html">Voir le programme</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Festival – Tous droits réservés</p>
+            <nav aria-label="Liens du pied de page">
+                <ul>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
