@@ -732,3 +732,166 @@ footer nav a {
         transform: none;
     }
 }
+
+.activity-carousel {
+    position: relative;
+    margin-bottom: 64px;
+    padding: 28px;
+    border-radius: 14px;
+    background: #f4f4f4;
+}
+
+.activity-carousel > input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.activity-carousel > input:focus-visible + .activity-carousel__slides {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+.activity-carousel__slides {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.activity-carousel__slide {
+    flex: 1 0 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: margin-left 300ms ease-out;
+}
+
+.activity-carousel__slide figure {
+    display: flex;
+    margin: 0;
+}
+
+.activity-carousel__slide figure > div {
+    position: relative;
+    flex: 1 1 75%;
+    aspect-ratio: 3 / 2;
+}
+
+.activity-carousel__slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.activity-carousel__slide figure > div img {
+    position: absolute;
+    inset: 0;
+}
+
+.activity-carousel__slide figcaption {
+    align-self: flex-end;
+    flex: 0 0 25%;
+    min-width: 150px;
+    padding: 20px 20px 0;
+}
+
+.activity-carousel__slide .credit {
+    display: block;
+    margin-top: 1rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.activity-carousel > input:nth-of-type(1):checked ~ .activity-carousel__slides .activity-carousel__slide:first-child {
+    margin-left: 0;
+}
+
+.activity-carousel > input:nth-of-type(2):checked ~ .activity-carousel__slides .activity-carousel__slide:first-child {
+    margin-left: -100%;
+}
+
+.activity-carousel > input:nth-of-type(3):checked ~ .activity-carousel__slides .activity-carousel__slide:first-child {
+    margin-left: -200%;
+}
+
+.activity-carousel > input:nth-of-type(4):checked ~ .activity-carousel__slides .activity-carousel__slide:first-child {
+    margin-left: -300%;
+}
+
+.activity-carousel > input:nth-of-type(5):checked ~ .activity-carousel__slides .activity-carousel__slide:first-child {
+    margin-left: -400%;
+}
+
+.activity-carousel > input:nth-of-type(6):checked ~ .activity-carousel__slides .activity-carousel__slide:first-child {
+    margin-left: -500%;
+}
+
+.activity-carousel__thumbnails {
+    display: flex;
+    gap: 12px;
+    margin: 20px 0 0;
+    padding: 5px;
+    list-style: none;
+}
+
+.activity-carousel__thumbnails li {
+    flex: 1 1 0;
+    min-width: 0;
+    transition: box-shadow 200ms ease-in-out;
+}
+
+.activity-carousel__thumbnails label {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+.activity-carousel__thumbnails label:hover img,
+.activity-carousel__thumbnails label:focus-visible img {
+    box-shadow: 0 0 0 2px var(--accent);
+}
+
+.activity-carousel > input:nth-of-type(1):checked ~ .activity-carousel__thumbnails li:nth-child(1),
+.activity-carousel > input:nth-of-type(2):checked ~ .activity-carousel__thumbnails li:nth-child(2),
+.activity-carousel > input:nth-of-type(3):checked ~ .activity-carousel__thumbnails li:nth-child(3),
+.activity-carousel > input:nth-of-type(4):checked ~ .activity-carousel__thumbnails li:nth-child(4),
+.activity-carousel > input:nth-of-type(5):checked ~ .activity-carousel__thumbnails li:nth-child(5),
+.activity-carousel > input:nth-of-type(6):checked ~ .activity-carousel__thumbnails li:nth-child(6) {
+    box-shadow: 0 0 0 3px var(--accent);
+}
+
+@media (max-width: 700px) {
+    .activity-carousel {
+        padding: 16px;
+    }
+
+    .activity-carousel__slide figure {
+        flex-direction: column;
+    }
+
+    .activity-carousel__slide figure > div {
+        flex: none;
+        width: 100%;
+    }
+
+    .activity-carousel__slide figcaption {
+        min-width: 0;
+        padding: 16px 0 0;
+    }
+
+    .activity-carousel__thumbnails {
+        gap: 8px;
+        margin-right: -4px;
+        margin-left: -4px;
+    }
+}

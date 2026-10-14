@@ -41,39 +41,100 @@
         <section id="actualites" aria-labelledby="news-title">
             <div class="news-heading">
                 <h2 id="news-title">Dernières nouvelles</h2>
-                <div class="slider" role="region" aria-label="Galerie d'images du festival">
-                    <div class="slide-track">
-                        <div class="slide"><img src="img/espagna_001.jpg" height="100" width="250" alt=""></div>
-                        <div class="slide"><img src="img/montreal_001.jpg" height="100" width="250" alt=""></div>
-                        <div class="slide"><img src="img/ticket_photo_001.jpg" height="100" width="250" alt=""></div>
-                        <div class="slide"><img src="img/new_york_001.png" height="100" width="250" alt=""></div>
-                        <div class="slide"><img src="img/paris_001.jpg" height="100" width="250" alt=""></div>
-                        <div class="slide"><img src="img/pexels-cmrcn-27988858.jpg" height="100" width="250" alt=""></div>
-                        <div class="slide"><img src="img/portugal_001.jpg" height="100" width="250" alt=""></div>
-                        <div class="slide"><img src="img/ticket_photo_001.jpg" height="100" width="250" alt=""></div>
-
-                    </div>
-                </div>
             </div>
-            <!--
-            <div class="news-grid">
-                <article class="news-card">
-                    <time datetime="2026-06-08">8 juin 2026</time>
-                    <h3>La programmation sera dévoilée très bientôt</h3>
-                    <p>Encore un peu de patience : les premiers noms arrivent dans quelques jours.</p>
-                </article>
-                <article class="news-card">
-                    <time datetime="2026-05-29">29 mai 2026</time>
-                    <h3>Les bénévoles sont les bienvenus</h3>
-                    <p>Envie de vivre le festival de l'intérieur ? Rejoignez notre équipe et participez à l'aventure.</p>
-                </article>
-                <article class="news-card">
-                    <time datetime="2026-05-14">14 mai 2026</time>
-                    <h3>Les billets sont disponibles</h3>
-                    <p>Réservez votre place dès maintenant et retrouvons-nous bientôt pour faire la fête.</p>
-                </article>
+            <div class="activity-carousel" role="region" aria-label="Galerie d'images du festival" aria-roledescription="carrousel">
+                <input type="radio" name="activity-slides" checked="checked" id="activity-slide-1" aria-label="Afficher la photo 1">
+                <input type="radio" name="activity-slides" id="activity-slide-2" aria-label="Afficher la photo 2">
+                <input type="radio" name="activity-slides" id="activity-slide-3" aria-label="Afficher la photo 3">
+                <input type="radio" name="activity-slides" id="activity-slide-4" aria-label="Afficher la photo 4">
+                <input type="radio" name="activity-slides" id="activity-slide-5" aria-label="Afficher la photo 5">
+                <input type="radio" name="activity-slides" id="activity-slide-6" aria-label="Afficher la photo 6">
+                <ul class="activity-carousel__slides">
+                    <li class="activity-carousel__slide">
+                        <figure>
+                            <div>
+                                <img src="img/espagna_001.jpg" alt="">
+                            </div>
+                            <figcaption>
+                                En 2026, l’Espagne propose un calendrier riche en festivals électro,
+                                 rock, pop et urbains, du début juin à fin août, avec Barcelone, Madrid,
+                                 Bilbao et la côte méditerranéenne comme points forts 
+                                <span class="credit">Photo : Tim Marshall</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="activity-carousel__slide">
+                        <figure>
+                            <div>
+                                <img src="img/montreal_001.jpg" alt="">
+                            </div>
+                            <figcaption>
+                                Montréal propose un été 2026 exceptionnel avec plus de 60 festivals de musique,
+                                art, gastronomie et culture, dont Osheaga, le Festival international de Jazz et Wild Pride.
+                                <span class="credit">Photo : Christian Joudrey</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="activity-carousel__slide">
+                        <figure>
+                            <div>
+                                <img src="img/new_york_001.png" alt="">
+                            </div>
+                            <figcaption>
+                                New York City in 2026 offers a vibrant lineup of festivals, 
+                                from music and film to street fairs and cultural celebrations, ensuring something for every interest.
+                                <span class="credit">Photo : Steve Carter</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="activity-carousel__slide">
+                        <figure>
+                            <div>
+                                <img src="img/paris_001.jpg" alt="">
+                            </div>
+                            <figcaption>
+                                festivals incontournables à Paris en 2026, 
+                                des grands événements comme Lollapalooza et Solidays aux festivals plus intimistes.
+                                <span class="credit">Photo : Aleksandra Boguslawska</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="activity-carousel__slide">
+                        <figure>
+                            <div>
+                                <img src="img/pexels-cmrcn-27988858.jpg" alt="">
+                            </div>
+                            <figcaption>
+                                N'hésitez pas à rester informé sur les festivals à venir en 2027 - 2028, 
+                                car de nouvelles annonces sont faites régulièrement.
+                                <span class="credit">Photo : Rosan Harmens</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="activity-carousel__slide">
+                        <figure>
+                            <div>
+                                <img src="img/portugal_001.jpg" alt="">
+                            </div>
+                            <figcaption>
+                                Le Portugal vit au rythme des festivals. Presque chaque semaine de l'année, quelque part entre le Minho et l'Algarve,
+                                une ville grille des sardines, jette des fleurs, 
+                                tire un feu d'artifice au-dessus d'une rivière ou remplit une place de fado. 
+                                Ce guide est la carte de toute l'année : les événements au Portugal essentiels pour 2026 et 2027
+                                <span class="credit">Photo : Annie Spratt</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <ul class="activity-carousel__thumbnails" aria-label="Choisir une photo">
+                    <li><label for="activity-slide-1" aria-label="Afficher la photo 1"><img src="img/espagna_001.jpg" alt=""></label></li>
+                    <li><label for="activity-slide-2" aria-label="Afficher la photo 2"><img src="img/montreal_001.jpg" alt=""></label></li>
+                    <li><label for="activity-slide-3" aria-label="Afficher la photo 3"><img src="img/new_york_001.png" alt=""></label></li>
+                    <li><label for="activity-slide-4" aria-label="Afficher la photo 4"><img src="img/paris_001.jpg" alt=""></label></li>
+                    <li><label for="activity-slide-5" aria-label="Afficher la photo 5"><img src="img/pexels-cmrcn-27988858.jpg" alt=""></label></li>
+                    <li><label for="activity-slide-6" aria-label="Afficher la photo 6"><img src="img/portugal_001.jpg" alt=""></label></li>
+                </ul>
             </div>
-            -->
         </section>
     </main>
 
