@@ -4,306 +4,210 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos – Festival</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        :root {
-            --indigo: #2e2a6b;
-            --violet: #3f3a86;
-            --rouge: #c0414f;
-            --rouge-texte: #b3343f;
-            --or: #f0b43c;
-            --fond: #f3f3f1;
-            --titre: #2b2d3a;
-            --gris: #5b5e6b;
-            --blanc: #ffffff;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: var(--fond);
-            color: var(--titre);
-            line-height: 1.6;
-        }
-
-        a:focus-visible {
-            outline: 3px solid var(--or);
-            outline-offset: 3px;
-        }
-
-        .conteneur {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        /* En-tête */
-        .site-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 1.2rem 1.5rem;
-        }
-
-        .logo {
-            color: var(--titre);
-            font-weight: 800;
-            font-size: 1.3rem;
-            text-decoration: none;
-        }
-
-        .site-header ul {
-            display: flex;
-            gap: 1.5rem;
-            list-style: none;
-        }
-
-        .site-header nav a {
-            color: var(--gris);
-            text-decoration: none;
-            font-size: 0.95rem;
-        }
-
-        .site-header nav a:hover,
-        .site-header nav a[aria-current="page"] {
-            color: var(--rouge-texte);
-        }
+        /* ===== Page À propos ===== */
 
         /* Titre de page */
-        .entete-page {
-            padding: 2.5rem 0 1.5rem;
+        .apropos-entete {
+            padding: 56px 0 24px;
         }
 
-        .surtitre {
-            color: var(--rouge-texte);
-            font-weight: 700;
-            font-size: 0.85rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-        }
-
-        h1 {
-            font-size: clamp(2.6rem, 8vw, 5rem);
-            font-weight: 800;
-            letter-spacing: -0.04em;
-            line-height: 1;
-            margin-bottom: 1rem;
-        }
-
-        .intro {
+        .apropos-intro {
             max-width: 60ch;
-            color: var(--gris);
+            margin-bottom: 0;
+            color: var(--muted);
             font-size: 1.1rem;
         }
 
-        /* Cartes dégradées */
-        .carte-degrade {
-            border-radius: 20px;
-            color: var(--blanc);
+        /* Carte dégradée (même style que les autres pages) */
+        .apropos-carte {
+            border-radius: 12px;
             background:
-                radial-gradient(circle at 85% 25%, rgba(240, 180, 60, 0.85), transparent 38%),
-                radial-gradient(circle at 80% 95%, rgba(192, 65, 79, 0.95), transparent 55%),
-                linear-gradient(125deg, var(--indigo), var(--violet) 55%, #4a2d68);
+                radial-gradient(ellipse at 80% 20%, #ffbd59 0, transparent 32%),
+                radial-gradient(ellipse at 70% 80%, #d83b54 0, transparent 45%),
+                linear-gradient(120deg, #45245d, #172f55);
+            color: #fff;
         }
 
-        .une {
-            padding: 2.5rem 2rem;
-            margin: 1.5rem 0 3rem;
+        .apropos-une {
+            margin: 8px 0 48px;
+            padding: 40px 36px;
         }
 
-        .une .date {
-            color: var(--or);
-            font-weight: 700;
-            font-size: 0.85rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-bottom: 0.8rem;
+        .apropos-une .eyebrow {
+            color: #ffd27a;
         }
 
-        .une h2 {
-            font-size: clamp(1.8rem, 5vw, 2.8rem);
-            line-height: 1.1;
-            letter-spacing: -0.03em;
+        .apropos-une h2 {
             max-width: 22ch;
-            margin-bottom: 0.8rem;
+            margin-bottom: 12px;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            letter-spacing: -0.05em;
+            line-height: 1.1;
         }
 
-        .une p {
+        .apropos-une p:last-child {
             max-width: 52ch;
+            margin-bottom: 0;
+            color: #f1eaf4;
         }
 
-        /* Sections */
-        section h2.titre-section {
+        /* Titres de section */
+        .apropos-titre {
+            margin-bottom: 16px;
             font-size: 1.6rem;
-            letter-spacing: -0.02em;
-            margin-bottom: 1rem;
+            letter-spacing: -0.04em;
         }
 
-        .histoire {
-            margin-bottom: 3rem;
+        /* Histoire */
+        .apropos-histoire {
+            margin-bottom: 48px;
         }
 
-        .histoire p {
+        .apropos-histoire p {
             max-width: 65ch;
-            margin-bottom: 1rem;
-            color: var(--gris);
+            margin-bottom: 16px;
+            color: var(--muted);
         }
 
-        /* Infos en bref */
-        .infos {
-            margin-bottom: 3rem;
+        /* En bref */
+        .apropos-infos {
+            margin-bottom: 48px;
         }
 
-        .infos dl {
+        .apropos-infos dl {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
+            gap: 16px;
+            margin: 0;
         }
 
-        .infos dl div {
-            background: var(--blanc);
-            border-radius: 14px;
-            border-top: 4px solid var(--rouge);
-            padding: 1rem 1.2rem;
+        .apropos-infos dl div {
+            padding: 18px 20px;
+            border: 1px solid var(--line);
+            border-top: 4px solid var(--accent);
+            border-radius: 10px;
+            background: #fff;
         }
 
-        .infos dt {
-            color: var(--gris);
+        .apropos-infos dt {
+            color: var(--muted);
             font-size: 0.9rem;
         }
 
-        .infos dd {
+        .apropos-infos dd {
+            margin: 0;
             font-size: 1.2rem;
             font-weight: 800;
             line-height: 1.3;
         }
 
         /* Valeurs */
-        .valeurs {
-            margin-bottom: 3rem;
+        .apropos-valeurs {
+            margin-bottom: 48px;
         }
 
-        .valeurs .grille {
+        .apropos-grille {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
+            gap: 24px;
         }
 
-        .valeurs article {
-            border-left: 5px solid var(--or);
-            padding-left: 1rem;
+        .apropos-grille article {
+            padding-left: 16px;
+            border-left: 4px solid #ffbd59;
         }
 
-        .valeurs h3 {
+        .apropos-grille h3 {
+            margin: 0 0 4px;
             font-size: 1.15rem;
-            margin-bottom: 0.3rem;
         }
 
-        .valeurs p {
-            color: var(--gris);
+        .apropos-grille p {
+            margin: 0;
+            color: var(--muted);
         }
 
         /* Appel à l'action */
-        .cta {
+        .apropos-cta {
+            margin-bottom: 64px;
+            padding: 48px 24px;
             text-align: center;
-            padding: 3rem 1.5rem;
-            margin-bottom: 3rem;
         }
 
-        .cta h2 {
+        .apropos-cta h2 {
+            margin-bottom: 20px;
             font-size: 1.8rem;
-            letter-spacing: -0.02em;
-            margin-bottom: 1.2rem;
+            letter-spacing: -0.04em;
         }
 
-        .bouton {
-            display: inline-block;
-            padding: 0.9rem 2rem;
-            background: var(--blanc);
-            color: var(--indigo);
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 999px;
-            transition: background 0.2s;
-        }
-
-        .bouton:hover {
-            background: var(--or);
-        }
-
-        /* Pied de page */
-        .site-footer {
-            padding: 1.5rem;
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--gris);
-            border-top: 1px solid #deded9;
+        /* Accessibilité */
+        main a:focus-visible {
+            outline: 3px solid #ffbd59;
+            outline-offset: 3px;
         }
 
         /* Mobile */
-        @media (max-width: 600px) {
-            .site-header {
-                flex-direction: column;
-                gap: 0.6rem;
+        @media (max-width: 700px) {
+            .apropos-entete {
+                padding-top: 40px;
             }
 
-            .une {
-                padding: 1.8rem 1.2rem;
+            .apropos-une {
+                padding: 28px 22px;
             }
         }
     </style>
 </head>
 <body>
     <header class="site-header">
-        <a class="logo" href="index.html">Festival</a>
-        <nav aria-label="Navigation principale">
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="a-propos.html" aria-current="page">À propos</a></li>
-            </ul>
-        </nav>
+        <div class="container navigation">
+            <a href="index.html" class="logo">Festival</a>
+            <nav aria-label="Navigation principale">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="activites.html">Activités</a></li>
+                    <li><a href="a-propos.html" aria-current="page">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="conteneur">
-        <div class="entete-page">
-            <p class="surtitre">Le festival</p>
+    <main class="container">
+        <div class="apropos-entete">
+            <p class="eyebrow">Le festival</p>
             <h1>À propos</h1>
-            <p class="intro">Qui nous sommes, d'où vient le festival et ce qui nous fait avancer.</p>
+            <p class="apropos-intro">Qui nous sommes, d'où vient le festival et ce qui nous fait avancer.</p>
         </div>
 
-        <section class="carte-degrade une">
-            <p class="date">Depuis 2015</p>
+        <section class="apropos-carte apropos-une">
+            <p class="eyebrow">Depuis 2015</p>
             <h2>Trois jours de musique, une seule communauté.</h2>
             <p>Artistes, bénévoles et public se retrouvent chaque été autour de la scène.</p>
         </section>
 
-        <section class="histoire">
-            <h2 class="titre-section">Notre histoire</h2>
+        <section class="apropos-histoire">
+            <h2 class="apropos-titre">Notre histoire</h2>
             <p>Né dans un petit village, le festival a commencé avec une scène, deux groupes locaux et une centaine de curieux. Aujourd'hui, il accueille des milliers de personnes chaque été.</p>
             <p>Notre idée n'a pas changé : faire découvrir des artistes émergents et créer un moment de partage ouvert à tous.</p>
         </section>
 
-        <section class="infos" aria-labelledby="infos-titre">
-            <h2 class="titre-section" id="infos-titre">En bref</h2>
+        <section class="apropos-infos" aria-labelledby="infos-titre">
+            <h2 class="apropos-titre" id="infos-titre">En bref</h2>
             <dl>
                 <div>
                     <dt>Dates</dt>
-                    <dd>12 au 14 juillet</dd>
+                    <dd>10 au 12 juillet 2026</dd>
                 </div>
                 <div>
                     <dt>Lieu</dt>
-                    <dd>Parc des Expositions</dd>
+                    <dd>Parc du Moulin</dd>
                 </div>
                 <div>
                     <dt>Artistes</dt>
-                    <dd>40 concerts sur 3 scènes</dd>
+                    <dd>30+ artistes sur 2 scènes</dd>
                 </div>
                 <div>
                     <dt>Public</dt>
@@ -312,9 +216,9 @@
             </dl>
         </section>
 
-        <section class="valeurs">
-            <h2 class="titre-section">Ce qui nous guide</h2>
-            <div class="grille">
+        <section class="apropos-valeurs">
+            <h2 class="apropos-titre">Ce qui nous guide</h2>
+            <div class="apropos-grille">
                 <article>
                     <h3>Découverte</h3>
                     <p>La moitié de la programmation est consacrée à des artistes émergents.</p>
@@ -330,14 +234,22 @@
             </div>
         </section>
 
-        <section class="carte-degrade cta">
+        <section class="apropos-carte apropos-cta">
             <h2>Rejoignez-nous cet été</h2>
-            <a class="bouton" href="index.html">Voir le programme</a>
+            <a class="button" href="activites.html">Voir le programme</a>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <p>&copy; 2026 Festival. Tous droits réservés.</p>
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Festival – Tous droits réservés</p>
+            <nav aria-label="Liens du pied de page">
+                <ul>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
 </body>
 </html>
