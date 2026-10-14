@@ -8,10 +8,10 @@ L'objectif principal est de travailler en équipe avec Git et GitHub en suivant 
 
 | Membre | Page |
 |---|---|
-| Faissel Friouchen | Accueil |
-| [Nom Prénom] | Activités |
-| [Nom Prénom] | À propos |
-| [Nom Prénom] | Contact |
+| Faissel Friouchen (Ficello) | Accueil |
+| [Michael MARIGARD] | Activités |
+| Rock Felix  | À propos |
+| Francis | Contact |
 
 ## Lancer le projet
 
