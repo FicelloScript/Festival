@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Retrouvez les dernières actualités du Festival en Scène.">
+    <title>Actualités — Festival en Scène</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container navigation">
+            <a href="index.html" class="logo">Festival</a>
+            <nav aria-label="Navigation principale">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="activites.html"  aria-current="page">Activités</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro" aria-labelledby="page-title">
+            <p class="eyebrow">La vie du festival</p>
+            <h1 id="page-title">Les actualités</h1>
+            <p>Les annonces, les coulisses et les rendez-vous à ne pas manquer. Toute l'énergie du festival, au même endroit.</p>
+        </section>
+
+        <article class="featured">
+            <div class="featured-content">
+                <p class="eyebrow">À la une · 12 juin 2026</p>
+                <h2>Le festival revient pour trois jours de musique et de partage</h2>
+                <p>Découvrez bientôt une programmation pleine de surprises, dans une ambiance festive et conviviale.</p>
+            </div>
+        </article>
+
+        <section id="actualites" aria-labelledby="news-title">
+            <div class="news-heading">
+                <h2 id="news-title">Dernières nouvelles</h2>
+            </div>
+            <div class="activity-carousel" role="region" aria-label="Galerie d'images du festival" aria-roledescription="carrousel">
+                <input type="radio" name="activity-slides" checked="checked" id="activity-slide-1" aria-label="Afficher la photo 1">
+                <input type="radio" name="activity-slides" id="activity-slide-2" aria-label="Afficher la photo 2">
+                <input type="radio" name="activity-slides" id="activity-slide-3" aria-label="Afficher la photo 3">
+                <input type="radio" name="activity-slides" id="activity-slide-4" aria-label="Afficher la photo 4">
+                <input type="radio" name="activity-slides" id="activity-slide-5" aria-label="Afficher la photo 5">
+                <input type="radio" name="activity-slides" id="activity-slide-6" aria-label="Afficher la photo 6">
+                <ul class="activity-carousel__slides">
+                    <li class="activity-carousel__slide">
+                        <figure>
+                            <div>
+                                <img src="img/espagna_001.jpg" alt="">
+                            </div>
+                            <figcaption>
+                                En 2026, l’Espagne propose un calendrier riche en festivals électro,
+                                 rock, pop et urbains, du début juin à fin août, avec Barcelone, Madrid,
+                                 Bilbao et la côte méditerranéenne comme points forts 
+                                <span class="credit">Photo : Tim Marshall</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="activity-carousel__slide">
+                        <figure>
+                            <div>
+                                <img src="img/montreal_001.jpg" alt="">
+                            </div>
+                            <figcaption>
+                                Montréal propose un été 2026 exceptionnel avec plus de 60 festivals de musique,
+                                art, gastronomie et culture, dont Osheaga, le Festival international de Jazz et Wild Pride.
+                                <span class="credit">Photo : Christian Joudrey</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="activity-carousel__slide">
+                        <figure>
+                            <div>
+                                <img src="img/new_york_001.png" alt="">
+                            </div>
+                            <figcaption>
+                                New York City in 2026 offers a vibrant lineup of festivals, 
+                                from music and film to street fairs and cultural celebrations, ensuring something for every interest.
+                                <span class="credit">Photo : Steve Carter</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="activity-carousel__slide">
+                        <figure>
+                            <div>
+                                <img src="img/paris_001.jpg" alt="">
+                            </div>
+                            <figcaption>
+                                festivals incontournables à Paris en 2026, 
+                                des grands événements comme Lollapalooza et Solidays aux festivals plus intimistes.
+                                <span class="credit">Photo : Aleksandra Boguslawska</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="activity-carousel__slide">
+                        <figure>
+                            <div>
+                                <img src="img/pexels-cmrcn-27988858.jpg" alt="">
+                            </div>
+                            <figcaption>
+                                N'hésitez pas à rester informé sur les festivals à venir en 2027 - 2028, 
+                                car de nouvelles annonces sont faites régulièrement.
+                                <span class="credit">Photo : Rosan Harmens</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="activity-carousel__slide">
+                        <figure>
+                            <div>
+                                <img src="img/portugal_001.jpg" alt="">
+                            </div>
+                            <figcaption>
+                                Le Portugal vit au rythme des festivals. Presque chaque semaine de l'année, quelque part entre le Minho et l'Algarve,
+                                une ville grille des sardines, jette des fleurs, 
+                                tire un feu d'artifice au-dessus d'une rivière ou remplit une place de fado. 
+                                Ce guide est la carte de toute l'année : les événements au Portugal essentiels pour 2026 et 2027
+                                <span class="credit">Photo : Annie Spratt</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <ul class="activity-carousel__thumbnails" aria-label="Choisir une photo">
+                    <li><label for="activity-slide-1" aria-label="Afficher la photo 1"><img src="img/espagna_001.jpg" alt=""></label></li>
+                    <li><label for="activity-slide-2" aria-label="Afficher la photo 2"><img src="img/montreal_001.jpg" alt=""></label></li>
+                    <li><label for="activity-slide-3" aria-label="Afficher la photo 3"><img src="img/new_york_001.png" alt=""></label></li>
+                    <li><label for="activity-slide-4" aria-label="Afficher la photo 4"><img src="img/paris_001.jpg" alt=""></label></li>
+                    <li><label for="activity-slide-5" aria-label="Afficher la photo 5"><img src="img/pexels-cmrcn-27988858.jpg" alt=""></label></li>
+                    <li><label for="activity-slide-6" aria-label="Afficher la photo 6"><img src="img/portugal_001.jpg" alt=""></label></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+<footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Festival – Tous droits réservés</p>
+            <nav aria-label="Liens du pied de page">
+                <ul>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

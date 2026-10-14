@@ -1,11 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Accueil – Festival</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="site-header">
+        <div class="container navigation">
+            <a href="index.html" class="logo">Festival</a>
+            <nav aria-label="Navigation principale">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Accueil</a></li>
+                    <li><a href="activites.html">Activités</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.htm">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="home-hero">
+            <div class="home-blob home-blob-1"></div>
+            <div class="home-blob home-blob-2"></div>
+            <div class="home-blob home-blob-3"></div>
+
+            <div class="container">
+                <div class="home-hero-content">
+                    <p class="eyebrow home-fade-up">Édition 2026 · 10 – 12 juillet · Parc du Moulin</p>
+                    <h1 class="home-fade-up home-delay-1">Trois jours pour <span class="home-gradient-text">vibrer ensemble</span></h1>
+                    <p class="home-hero-text home-fade-up home-delay-2">Concerts, ateliers et animations pour tous les âges : le festival revient cet été pour trois jours de fête en plein air.</p>
+                    <div class="home-actions home-fade-up home-delay-3">
+                        <a href="activites.html" class="button">Voir la programmation</a>
+                        <a href="contact.html" class="button button-secondary">Infos pratiques</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-scroll" aria-hidden="true"></div>
+        </section>
+
+        <div class="home-marquee" aria-hidden="true">
+            <div class="home-marquee-track">
+                <span>Les Lucioles</span>
+                <span>Nova Kid</span>
+                <span>Mélo Bleu</span>
+                <span>Orage Disco</span>
+                <span>Tamara Sol</span>
+                <span>Les Fanfarons</span>
+                <span>Atelier graff</span>
+                <span>Scène ouverte</span>
+                <span>Les Lucioles</span>
+                <span>Nova Kid</span>
+                <span>Mélo Bleu</span>
+                <span>Orage Disco</span>
+                <span>Tamara Sol</span>
+                <span>Les Fanfarons</span>
+                <span>Atelier graff</span>
+                <span>Scène ouverte</span>
+            </div>
+        </div>
+
+        <div class="container">
+            <section class="home-stats" aria-label="Le festival en chiffres">
+                <div class="home-stat home-reveal">
+                    <strong>3</strong>
+                    <span>jours de fête</span>
+                </div>
+                <div class="home-stat home-reveal">
+                    <strong>30+</strong>
+                    <span>artistes</span>
+                </div>
+                <div class="home-stat home-reveal">
+                    <strong>2</strong>
+                    <span>scènes</span>
+                </div>
+                <div class="home-stat home-reveal">
+                    <strong>12</strong>
+                    <span>ateliers</span>
+                </div>
+            </section>
+
+            <section>
+                <div class="news-heading">
+                    <h2>À découvrir</h2>
+                </div>
+                <div class="news-grid">
+                    <article class="news-card home-card home-reveal">
+                        <span class="home-card-number">01</span>
+                        <h3>La programmation</h3>
+                        <p>Concerts, ateliers créatifs et animations : tout le programme des trois jours.</p>
+                        <a href="activites.html" class="card-link">Voir les activités <span>→</span></a>
+                    </article>
+                    <article class="news-card home-card home-reveal">
+                        <span class="home-card-number">02</span>
+                        <h3>Notre histoire</h3>
+                        <p>Comment le festival est né et les valeurs que l'association défend depuis le début.</p>
+                        <a href="a-propos.html" class="card-link">En savoir plus <span>→</span></a>
+                    </article>
+                    <article class="news-card home-card home-reveal">
+                        <span class="home-card-number">03</span>
+                        <h3>Venir au festival</h3>
+                        <p>Accès, horaires et contact de l'équipe pour toutes vos questions.</p>
+                        <a href="contact.html" class="card-link">Nous contacter <span>→</span></a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="home-cta home-reveal">
+                <p class="eyebrow">Entrée libre</p>
+                <h2>On vous attend au parc du Moulin</h2>
+                <p>Venez en famille ou entre amis, il y en aura pour tout le monde du matin jusqu'au bout de la nuit.</p>
+                <a href="contact.html" class="button">Préparer ma venue</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Festival – Tous droits réservés</p>
+            <nav aria-label="Liens du pied de page">
+                <ul>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
