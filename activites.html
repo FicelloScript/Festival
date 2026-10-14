@@ -11,12 +11,14 @@
 <body>
     <header class="site-header">
         <div class="container navigation">
-            <a class="logo" href="index.html">Festival<span> en Scène</span></a>
+            <a href="index.html" class="logo">Festival</a>
             <nav aria-label="Navigation principale">
-                <a href="index.html">Accueil</a>
-                <a href="#actualites" aria-current="page">Actualités</a>
-                <a href="#programme">Programme</a>
-                <a href="#infos">Infos pratiques</a>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="activites.html"  aria-current="page">Activités</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -39,7 +41,21 @@
         <section id="actualites" aria-labelledby="news-title">
             <div class="news-heading">
                 <h2 id="news-title">Dernières nouvelles</h2>
+                <div class="slider" role="region" aria-label="Galerie d'images du festival">
+                    <div class="slide-track">
+                        <div class="slide"><img src="img/espagna_001.jpg" height="100" width="250" alt=""></div>
+                        <div class="slide"><img src="img/montreal_001.jpg" height="100" width="250" alt=""></div>
+                        <div class="slide"><img src="img/ticket_photo_001.jpg" height="100" width="250" alt=""></div>
+                        <div class="slide"><img src="img/new_york_001.png" height="100" width="250" alt=""></div>
+                        <div class="slide"><img src="img/paris_001.jpg" height="100" width="250" alt=""></div>
+                        <div class="slide"><img src="img/pexels-cmrcn-27988858.jpg" height="100" width="250" alt=""></div>
+                        <div class="slide"><img src="img/portugal_001.jpg" height="100" width="250" alt=""></div>
+                        <div class="slide"><img src="img/ticket_photo_001.jpg" height="100" width="250" alt=""></div>
+
+                    </div>
+                </div>
             </div>
+            <!--
             <div class="news-grid">
                 <article class="news-card">
                     <time datetime="2026-06-08">8 juin 2026</time>
@@ -57,13 +73,22 @@
                     <p>Réservez votre place dès maintenant et retrouvons-nous bientôt pour faire la fête.</p>
                 </article>
             </div>
-
-            
+            -->
         </section>
     </main>
 
-    <footer id="infos">
-        <div class="container">Festival en Scène · De la musique, des rencontres et de beaux souvenirs.</div>
+<footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Festival – Tous droits réservés</p>
+            <nav aria-label="Liens du pied de page">
+                <ul>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
+
+    
 </body>
 </html>
