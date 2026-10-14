@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos – Festival</title>
+    <style>
+        :root {
+            --indigo: #2e2a6b;
+            --violet: #3f3a86;
+            --rouge: #c0414f;
+            --rouge-texte: #b3343f;
+            --or: #f0b43c;
+            --fond: #f3f3f1;
+            --titre: #2b2d3a;
+            --gris: #5b5e6b;
+            --blanc: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--fond);
+            color: var(--titre);
+            line-height: 1.6;
+        }
+
+        a:focus-visible {
+            outline: 3px solid var(--or);
+            outline-offset: 3px;
+        }
+
+        .conteneur {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* En-tête */
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1.2rem 1.5rem;
+        }
+
+        .logo {
+            color: var(--titre);
+            font-weight: 800;
+            font-size: 1.3rem;
+            text-decoration: none;
+        }
+
+        .site-header ul {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .site-header nav a {
+            color: var(--gris);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .site-header nav a:hover,
+        .site-header nav a[aria-current="page"] {
+            color: var(--rouge-texte);
+        }
+
+        /* Titre de page */
+        .entete-page {
+            padding: 2.5rem 0 1.5rem;
+        }
+
+        .surtitre {
+            color: var(--rouge-texte);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: clamp(2.6rem, 8vw, 5rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .intro {
+            max-width: 60ch;
+            color: var(--gris);
+            font-size: 1.1rem;
+        }
+
+        /* Cartes dégradées */
+        .carte-degrade {
+            border-radius: 20px;
+            color: var(--blanc);
+            background:
+                radial-gradient(circle at 85% 25%, rgba(240, 180, 60, 0.85), transparent 38%),
+                radial-gradient(circle at 80% 95%, rgba(192, 65, 79, 0.95), transparent 55%),
+                linear-gradient(125deg, var(--indigo), var(--violet) 55%, #4a2d68);
+        }
+
+        .une {
+            padding: 2.5rem 2rem;
+            margin: 1.5rem 0 3rem;
+        }
+
+        .une .date {
+            color: var(--or);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+        }
+
+        .une h2 {
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            max-width: 22ch;
+            margin-bottom: 0.8rem;
+        }
+
+        .une p {
+            max-width: 52ch;
+        }
+
+        /* Sections */
+        section h2.titre-section {
+            font-size: 1.6rem;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+
+        .histoire {
+            margin-bottom: 3rem;
+        }
+
+        .histoire p {
+            max-width: 65ch;
+            margin-bottom: 1rem;
+            color: var(--gris);
+        }
+
+        /* Infos en bref */
+        .infos {
+            margin-bottom: 3rem;
+        }
+
+        .infos dl {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .infos dl div {
+            background: var(--blanc);
+            border-radius: 14px;
+            border-top: 4px solid var(--rouge);
+            padding: 1rem 1.2rem;
+        }
+
+        .infos dt {
+            color: var(--gris);
+            font-size: 0.9rem;
+        }
+
+        .infos dd {
+            font-size: 1.2rem;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        /* Valeurs */
+        .valeurs {
+            margin-bottom: 3rem;
+        }
+
+        .valeurs .grille {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .valeurs article {
+            border-left: 5px solid var(--or);
+            padding-left: 1rem;
+        }
+
+        .valeurs h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .valeurs p {
+            color: var(--gris);
+        }
+
+        /* Appel à l'action */
+        .cta {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .cta h2 {
+            font-size: 1.8rem;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.2rem;
+        }
+
+        .bouton {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            background: var(--blanc);
+            color: var(--indigo);
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 999px;
+            transition: background 0.2s;
+        }
+
+        .bouton:hover {
+            background: var(--or);
+        }
+
+        /* Pied de page */
+        .site-footer {
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--gris);
+            border-top: 1px solid #deded9;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .site-header {
+                flex-direction: column;
+                gap: 0.6rem;
+            }
+
+            .une {
+                padding: 1.8rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html">Festival</a>
+        <nav aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="a-propos.html" aria-current="page">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteneur">
+        <div class="entete-page">
+            <p class="surtitre">Le festival</p>
+            <h1>À propos</h1>
+            <p class="intro">Qui nous sommes, d'où vient le festival et ce qui nous fait avancer.</p>
+        </div>
+
+        <section class="carte-degrade une">
+            <p class="date">Depuis 2015</p>
+            <h2>Trois jours de musique, une seule communauté.</h2>
+            <p>Artistes, bénévoles et public se retrouvent chaque été autour de la scène.</p>
+        </section>
+
+        <section class="histoire">
+            <h2 class="titre-section">Notre histoire</h2>
+            <p>Né dans un petit village, le festival a commencé avec une scène, deux groupes locaux et une centaine de curieux. Aujourd'hui, il accueille des milliers de personnes chaque été.</p>
+            <p>Notre idée n'a pas changé : faire découvrir des artistes émergents et créer un moment de partage ouvert à tous.</p>
+        </section>
+
+        <section class="infos" aria-labelledby="infos-titre">
+            <h2 class="titre-section" id="infos-titre">En bref</h2>
+            <dl>
+                <div>
+                    <dt>Dates</dt>
+                    <dd>12 au 14 juillet</dd>
+                </div>
+                <div>
+                    <dt>Lieu</dt>
+                    <dd>Parc des Expositions</dd>
+                </div>
+                <div>
+                    <dt>Artistes</dt>
+                    <dd>40 concerts sur 3 scènes</dd>
+                </div>
+                <div>
+                    <dt>Public</dt>
+                    <dd>15 000 festivaliers</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section class="valeurs">
+            <h2 class="titre-section">Ce qui nous guide</h2>
+            <div class="grille">
+                <article>
+                    <h3>Découverte</h3>
+                    <p>La moitié de la programmation est consacrée à des artistes émergents.</p>
+                </article>
+                <article>
+                    <h3>Accessibilité</h3>
+                    <p>Tarifs réduits, site accessible aux personnes à mobilité réduite et espace calme.</p>
+                </article>
+                <article>
+                    <h3>Écologie</h3>
+                    <p>Gobelets réutilisables, tri des déchets et navettes pour limiter la voiture.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="carte-degrade cta">
+            <h2>Rejoignez-nous cet été</h2>
+            <a class="bouton" href="index.html">Voir le programme</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Festival. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
