@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Retrouvez les dernières actualités du Festival en Scène.">
+    <title>Actualités — Festival en Scène</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #202126;
+            --muted: #666873;
+            --paper: #fffdf8;
+            --accent: #e94f37;
+            --line: #e9e5dd;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .container {
+            width: min(1080px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .site-header {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .navigation {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .logo {
+            color: var(--ink);
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        nav a {
+            color: var(--muted);
+            font-size: 0.92rem;
+            text-decoration: none;
+        }
+
+        nav a:hover,
+        nav a[aria-current="page"] {
+            color: var(--accent);
+        }
+
+        .intro {
+            padding: 64px 0 36px;
+        }
+
+        .eyebrow {
+            margin: 0 0 8px;
+            color: var(--accent);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        h1,
+        h2,
+        p {
+            margin-top: 0;
+        }
+
+        h1 {
+            margin-bottom: 12px;
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            letter-spacing: -0.07em;
+            line-height: 1;
+        }
+
+        .intro > p:last-child {
+            max-width: 560px;
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        .featured {
+            min-height: 310px;
+            display: flex;
+            align-items: end;
+            margin: 8px 0 56px;
+            padding: 36px;
+            overflow: hidden;
+            border-radius: 12px;
+            background:
+                radial-gradient(ellipse at 80% 20%, #ffbd59 0, transparent 32%),
+                radial-gradient(ellipse at 70% 80%, #d83b54 0, transparent 45%),
+                linear-gradient(120deg, #45245d, #172f55);
+            color: white;
+        }
+
+        .featured-content {
+            max-width: 590px;
+        }
+
+        .featured .eyebrow {
+            color: #ffd27a;
+        }
+
+        .featured h2 {
+            margin-bottom: 12px;
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            letter-spacing: -0.05em;
+            line-height: 1.1;
+        }
+
+        .featured p:last-child {
+            margin-bottom: 0;
+            color: #f1eaf4;
+        }
+
+        .news-heading {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .news-heading h2 {
+            margin-bottom: 0;
+            font-size: 1.6rem;
+            letter-spacing: -0.04em;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            padding-bottom: 64px;
+        }
+
+        .news-card {
+            min-height: 210px;
+            padding: 24px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        .news-card time {
+            display: block;
+            margin-bottom: 12px;
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .news-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+            letter-spacing: -0.03em;
+            line-height: 1.3;
+        }
+
+        .news-card p {
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+
+        footer {
+            padding: 22px 0;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
+        @media (max-width: 700px) {
+            .navigation {
+                align-items: flex-start;
+                flex-direction: column;
+                justify-content: center;
+                padding: 16px 0;
+            }
+
+            nav {
+                gap: 16px;
+            }
+
+            .intro {
+                padding-top: 48px;
+            }
+
+            .featured {
+                min-height: 280px;
+                padding: 26px;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+
+<!-- ------------------------FIN DU CSS----------------------------- -->
+<body>
+    <header class="site-header">
+        <div class="container navigation">
+            <a class="logo" href="index.html">Festival<span> en Scène</span></a>
+            <nav aria-label="Navigation principale">
+                <a href="index.html">Accueil</a>
+                <a href="#actualites" aria-current="page">Actualités</a>
+                <a href="#programme">Programme</a>
+                <a href="#infos">Infos pratiques</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro" aria-labelledby="page-title">
+            <p class="eyebrow">La vie du festival</p>
+            <h1 id="page-title">Les actualités</h1>
+            <p>Les annonces, les coulisses et les rendez-vous à ne pas manquer. Toute l'énergie du festival, au même endroit.</p>
+        </section>
+
+        <article class="featured">
+            <div class="featured-content">
+                <p class="eyebrow">À la une · 12 juin 2026</p>
+                <h2>Le festival revient pour trois jours de musique et de partage</h2>
+                <p>Découvrez bientôt une programmation pleine de surprises, dans une ambiance festive et conviviale.</p>
+            </div>
+        </article>
+
+        <section id="actualites" aria-labelledby="news-title">
+            <div class="news-heading">
+                <h2 id="news-title">Dernières nouvelles</h2>
+            </div>
+            <div class="news-grid">
+                <article class="news-card">
+                    <time datetime="2026-06-08">8 juin 2026</time>
+                    <h3>La programmation sera dévoilée très bientôt</h3>
+                    <p>Encore un peu de patience : les premiers noms arrivent dans quelques jours.</p>
+                </article>
+                <article class="news-card">
+                    <time datetime="2026-05-29">29 mai 2026</time>
+                    <h3>Les bénévoles sont les bienvenus</h3>
+                    <p>Envie de vivre le festival de l'intérieur ? Rejoignez notre équipe et participez à l'aventure.</p>
+                </article>
+                <article class="news-card">
+                    <time datetime="2026-05-14">14 mai 2026</time>
+                    <h3>Les billets sont disponibles</h3>
+                    <p>Réservez votre place dès maintenant et retrouvons-nous bientôt pour faire la fête.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer id="infos">
+        <div class="container">Festival en Scène · De la musique, des rencontres et de beaux souvenirs.</div>
+    </footer>
+</body>
+</html>
